@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url("../fonts/FiraSansCondensed-SemiBold.ttf"); 
+}
+
+body {
+    background-color: black;
+    font-size: 62.5%;
+}
+
+.shum {
+    position: fixed;
+    width: 200%;
+    height: 200vh;
+    background: url("../img/noise3.png") repeat;
+    opacity: 0.7;
+    animation: shum .3s infinite;
+}
+
+.lndnpg {
+    position: relative;
+
+}
+
+.content {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    height: 100vh;
+}
+
+
+
+@keyframes shum {
+    0%, 100% {
+        background-position: 0 0;
+    }
+
+    10% {
+        background-position: -5% -10%;
+    }
+
+    20% {
+        background-position: -15% 5%;
+    }
+
+    30% {
+        background-position: 7% -25%;
+    }
+
+    40% {
+        background-position: 20% 25%;
+    }
+
+    50% {
+        background-position: -25% 10%;
+    }
+
+    60% {
+        background-position: 15% 5%;
+    }
+
+    70% {
+        background-position: 0% 15%;
+    }
+
+    80% {
+        background-position: 25% 35%;
+    }
+
+    90% {
+        background-position: -10% 10%;
+    }
+}
+
+.links {
+    font-family: 'Fira Sans Condensed';
+    font-size: 2.35rem;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.logo_ {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+svg:hover  path{
+    fill: #fe53bb;
+}
+
+li:before {
+    content: "\002A";
+    color: #fe53bb;
+    padding-right: 5px;
+}
+
+a {
+    color: white;
+}
+
+li > a:hover {
+    color: #fe53bb;
+    display: inline-block;
+    animation: puls 1.5s ease-in-out infinite both;
+}
+
+@keyframes puls {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+      }
+      10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+      }
+      17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+      }
+      33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+      }
+      45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+      }
+}
